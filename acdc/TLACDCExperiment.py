@@ -152,10 +152,11 @@ class TLACDCExperiment:
 
         self.using_wandb = using_wandb
         if using_wandb:
+            wandb.login(key="6d61a1d8cf88ff512cee79afd78a7f9528345bee")
             wandb.init(
-                entity=wandb_entity_name,
-                group=wandb_group_name,
-                project=wandb_project_name,
+                # entity=wandb_entity_name,
+                group="ACDC",
+                project="ACDC",
                 name=wandb_run_name,
                 notes=wandb_notes,
                 dir=wandb_dir,
